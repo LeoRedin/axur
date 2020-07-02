@@ -39,8 +39,10 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [
-          ['components', './src/components']
-        ]
-      }
-    }
-};
+          ['components', './src/components'],
+          ['views', './src/views'],
+        ],
+      },
+    },
+  },
+}
