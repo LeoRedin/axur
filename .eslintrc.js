@@ -35,4 +35,12 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-one-expression-per-line': 'off',
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['components', './src/components']
+        ]
+      }
+    }
 };
