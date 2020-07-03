@@ -41,6 +41,7 @@ module.exports = {
         map: [
           ['components', './src/components'],
           ['views', './src/views'],
+          ['theme', './src/theme'],
         ],
       },
     },
