@@ -7,6 +7,9 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
   globals: {
     Atomics: 'readonly',
@@ -37,12 +40,9 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      alias: {
-        map: [
-          ['components', './src/components'],
-          ['views', './src/views'],
-          ['theme', './src/theme'],
-        ],
+      node: {
+        paths: ['src'],
+        extensions: ['.js'],
       },
     },
   },

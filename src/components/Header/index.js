@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Container, Section, MainHeader, NavContainer, Nav } from './styles'
 
 export default function Header() {

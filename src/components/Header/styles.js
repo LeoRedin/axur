@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { color } from 'theme/colors'
 
 export const Container = styled.div`
   flex: 1 0 auto;
@@ -6,14 +7,14 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   width: 100%;
-  background-color: rgb(49, 85, 220);
+  background-color: ${color.orange};
   background-attachment: scroll;
   background-origin: padding-box;
   background-clip: border-box;
   background-image: linear-gradient(
     -213deg,
-    rgb(94, 49, 220) 0%,
-    rgb(49, 85, 220) 100%
+    ${color.lightOrange} 0%,
+    ${color.orange} 100%
   );
   background-position: right center, left center;
   background-repeat: no-repeat;
