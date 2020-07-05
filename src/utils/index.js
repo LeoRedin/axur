@@ -1,12 +1,14 @@
+import { format } from 'date-fns'
+
 export function updatedPosts(authors, posts) {
   const correctValue = []
 
   posts.map(post => {
     const newPost = { ...post }
 
-    const date = new Date(post.metadata.publishedAt)
+    const date = new Date(post.metadata.publishedAt).toLocaleDateString()
 
-    newPost.date = date
+    newPost.publishedAt = date
 
     authors.map(a => {
       if (a.id === post.metadata.authorId) newPost.author = a.name

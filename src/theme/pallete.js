@@ -4,4 +4,5 @@ export const pallete = {
   mainRed: '#c32727',
   mainOrange: '#f75523',
   mainLightOrange: '#f28c41',
+  lighterWhite: '#fafafa',
 }

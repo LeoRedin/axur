@@ -38,6 +38,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-one-expression-per-line': 'off',
     'array-callback-return': 'off',
+    'react/jsx-indent': ['off'],
   },
   settings: {
     'import/resolver': {
