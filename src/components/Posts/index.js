@@ -26,6 +26,7 @@ export default function Posts() {
         {posts.length > 0 ? (
           posts.map(({ author, body, title, publishedAt }) => (
             <Post
+              key={body.substr(0, 10)}
               author={author}
               body={body}
               title={title}
