@@ -21,7 +21,6 @@ export const Section = styled.section`
   background-size: contain;
   position: relative;
   z-index: 0;
-  -moz-box-align: center;
   align-items: center;
   display: flex;
   height: 100px;
@@ -44,8 +43,16 @@ export const NavContainer = styled.div`
 export const Nav = styled.nav`
   width: 100%;
   display: flex;
-  -moz-box-pack: justify;
   justify-content: space-between;
-  -moz-box-align: center;
   align-items: center;
 `
+
+export const Logo = styled.a`
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+`
+export const Name = styled.span``

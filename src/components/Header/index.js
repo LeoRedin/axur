@@ -1,5 +1,13 @@
 import React from 'react'
-import { Container, Section, MainHeader, NavContainer, Nav } from './styles'
+import {
+  Container,
+  Section,
+  MainHeader,
+  NavContainer,
+  Nav,
+  Logo,
+  Name,
+} from './styles'
 
 export default function Header() {
   return (
@@ -7,7 +15,11 @@ export default function Header() {
       <Section />
       <MainHeader>
         <NavContainer>
-          <Nav>Nav</Nav>
+          <Nav>
+            <Logo>
+              <Name>AXUR</Name>
+            </Logo>
+          </Nav>
         </NavContainer>
       </MainHeader>
     </Container>
