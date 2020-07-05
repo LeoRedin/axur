@@ -1,5 +1,6 @@
 import React from 'react'
 import Post from 'components/Post'
+import Spinner from 'components/Spinner'
 import { getPosts } from 'services/requests'
 
 import { Container, PostsWrapper } from './styles'
@@ -22,16 +23,18 @@ export default function Posts() {
   return (
     <Container>
       <PostsWrapper>
-        {posts
-          ? posts.map(({ author, body, title, publishedAt }) => (
-              <Post
-                author={author}
-                body={body}
-                title={title}
-                publishedAt={publishedAt}
-              />
-            ))
-          : null}
+        {posts.length > 0 ? (
+          posts.map(({ author, body, title, publishedAt }) => (
+            <Post
+              author={author}
+              body={body}
+              title={title}
+              publishedAt={publishedAt}
+            />
+          ))
+        ) : (
+          <Spinner />
+        )}
       </PostsWrapper>
     </Container>
   )
