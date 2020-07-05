@@ -6,7 +6,7 @@
       "components": ["src/components/*"],
       "views": ["src/views/*"],
       "theme": ["src/theme/*"],
-      "assets": ["src/assets/*"]
+      "utils": ["src/utils/*"]
     }
   }
 }

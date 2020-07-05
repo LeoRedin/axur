@@ -37,6 +37,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'prettier/prettier': 'error',
     'react/jsx-one-expression-per-line': 'off',
+    'array-callback-return': 'off',
   },
   settings: {
     'import/resolver': {
