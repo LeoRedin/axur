@@ -1,12 +1,10 @@
-import { format } from 'date-fns'
-
 export function updatedPosts(authors, posts) {
   const correctValue = []
 
   posts.map(post => {
     const newPost = { ...post }
 
-    const date = new Date(post.metadata.publishedAt).toLocaleDateString()
+    const date = new Date(post.metadata.publishedAt).toLocaleDateString('pt-br')
 
     newPost.publishedAt = date
 
