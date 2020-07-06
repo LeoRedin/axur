@@ -5,7 +5,7 @@ import Posts from 'components/Posts'
 
 import { Container } from './styles'
 
-export default function Main() {
+export default function PostsScreen() {
   return (
     <Container>
       <Header />

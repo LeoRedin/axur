@@ -34,7 +34,9 @@ export default function Header() {
             </Logo>
             <Links>
               {links.map(({ name, path }) => (
-                <MyLink href={path}>{name}</MyLink>
+                <MyLink key={name} href={path}>
+                  {name}
+                </MyLink>
               ))}
             </Links>
           </Nav>

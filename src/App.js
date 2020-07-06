@@ -1,9 +1,16 @@
 import React from 'react'
+import { Router } from 'react-router-dom'
 
-import Main from 'views/Main'
+import history from 'services/history'
+
+import Routes from './routes'
 
 function App() {
-  return <Main />
+  return (
+    <Router history={history}>
+      <Routes />
+    </Router>
+  )
 }
 
 export default App
