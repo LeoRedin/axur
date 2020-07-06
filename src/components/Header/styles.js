@@ -2,9 +2,7 @@ import styled from 'styled-components'
 import { lighten } from 'polished'
 import { color } from 'theme'
 
-export const Container = styled.div`
-  flex: 1 0 auto;
-`
+export const Container = styled.div``
 
 export const Section = styled.section`
   width: 100%;
