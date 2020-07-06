@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { lighten } from 'polished'
-import { color } from 'theme/colors'
+import { color } from 'theme'
 
 export const Container = styled.div`
   margin: 20px;

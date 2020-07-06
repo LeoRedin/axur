@@ -1,11 +1,10 @@
 import React from 'react'
 
-import Header from 'components/Header'
-import Posts from 'components/Posts'
+import { Header, Posts } from 'components'
 
 import { Container } from './styles'
 
-export default function PostsScreen() {
+export function PostsScreen() {
   return (
     <Container>
       <Header />

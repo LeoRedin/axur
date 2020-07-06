@@ -1,8 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
-import PostsScreen from 'views/Posts'
-import Summary from 'views/Summary'
+import { PostsScreen, Summary } from 'views'
 
 export default function Routes() {
   return (

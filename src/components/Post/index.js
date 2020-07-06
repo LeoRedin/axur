@@ -10,7 +10,7 @@ import {
   Published,
 } from './styles'
 
-export default function Post({ title, body, author, publishedAt }) {
+export function Post({ title, body, author, publishedAt }) {
   return (
     <Container>
       <Title>{title}</Title>

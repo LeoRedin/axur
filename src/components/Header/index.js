@@ -11,7 +11,7 @@ import {
   MyLink,
 } from './styles'
 
-export default function Header() {
+export function Header() {
   const links = [
     {
       name: 'Listagem',

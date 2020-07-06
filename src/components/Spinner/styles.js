@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color } from 'theme/colors'
+import { color } from 'theme'
 
 export const Container = styled.div`
   position: absolute;

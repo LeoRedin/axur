@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function Summary() {
+export function Summary() {
   return <div>SUMARIO</div>
 }

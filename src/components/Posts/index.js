@@ -1,11 +1,10 @@
 import React from 'react'
-import Post from 'components/Post'
-import Spinner from 'components/Spinner'
+import { Post, Spinner } from 'components'
 import { getPosts } from 'services/requests'
 
 import { Container, PostsWrapper } from './styles'
 
-export default function Posts() {
+export function Posts() {
   const [posts, setPosts] = React.useState([])
 
   React.useEffect(() => {
