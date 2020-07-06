@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { lighten } from 'polished'
 import { color } from 'theme/colors'
 
 export const Container = styled.div`
@@ -56,3 +57,22 @@ export const Logo = styled.a`
   font-size: 2em;
 `
 export const Name = styled.span``
+
+export const Links = styled.div`
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+`
+
+export const MyLink = styled.a`
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 8px 10px;
+  border-radius: 3px;
+  background: transparent none repeat scroll 0% 0%;
+
+  &:hover {
+    background-color: ${lighten(0.15, color.orange)};
+  }
+`
