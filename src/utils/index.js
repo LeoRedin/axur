@@ -20,3 +20,18 @@ export function updatedPosts(authors, posts) {
 
   return correctValue
 }
+
+export function summary(posts) {
+  const postsSummary = []
+
+  posts.map(post => {
+    const newSummary = {
+      date: new Date(post.metadata.publishedAt).toLocaleDateString('pt-br'),
+      title: post.title,
+    }
+
+    return postsSummary.push(newSummary)
+  })
+
+  return postsSummary
+}
