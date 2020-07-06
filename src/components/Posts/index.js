@@ -1,6 +1,7 @@
 import React from 'react'
 import { Post, Spinner } from 'components'
 import { getPosts } from 'services/requests'
+import { orderedByDate } from 'utils'
 
 import {
   Container,
@@ -9,6 +10,8 @@ import {
   FilterLabel,
   AuthorLabel,
   Authors,
+  DateOrder,
+  DateOption,
 } from './styles'
 
 export function Posts() {
@@ -16,6 +19,7 @@ export function Posts() {
   const [posts, setPosts] = React.useState([])
   const [authors, setAuthors] = React.useState(null)
   const [activeAuthor, setActiveAuthor] = React.useState('')
+  const [activeDate, setActiveDate] = React.useState('')
 
   React.useEffect(() => {
     async function fetchData() {
@@ -44,12 +48,27 @@ export function Posts() {
 
   const handleFilter = (type, filterValue) => {
     if (type === 'author') {
-      const updatedPosts = [...originalPosts]
+      if (activeAuthor === filterValue) {
+        setActiveAuthor('')
+        setPosts(originalPosts)
+      } else {
+        setActiveDate('')
+        const updatedPosts = [...originalPosts]
 
-      const filtered = updatedPosts.filter(post => post.author === filterValue)
+        const filtered = updatedPosts.filter(
+          post => post.author === filterValue,
+        )
 
-      setActiveAuthor(filterValue)
-      setPosts(filtered)
+        setActiveAuthor(filterValue)
+        setPosts(filtered)
+      }
+    } else if (activeDate === filterValue) {
+      setActiveDate('')
+      setPosts(originalPosts)
+    } else {
+      setActiveAuthor('')
+      setActiveDate(filterValue)
+      setPosts(orderedByDate(originalPosts, filterValue))
     }
   }
 
@@ -71,6 +90,21 @@ export function Posts() {
                 ))
               : null}
           </Authors>
+          <FilterLabel>Filtre por data:</FilterLabel>
+          <DateOrder>
+            <DateOption
+              onClick={() => handleFilter('date', 'c')}
+              active={activeDate === 'c'}
+            >
+              Crescente
+            </DateOption>
+            <DateOption
+              onClick={() => handleFilter('date', 'd')}
+              active={activeDate === 'd'}
+            >
+              Decrescente
+            </DateOption>
+          </DateOrder>
         </FilterWrapper>
       ) : null}
       <PostsWrapper>

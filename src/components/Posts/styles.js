@@ -41,3 +41,22 @@ export const Authors = styled.div`
   justify-content: space-around;
   align-items: center;
 `
+
+export const DateOrder = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+
+export const DateOption = styled.div`
+  padding: 8px 10px;
+  border-radius: 3px;
+  background: transparent none repeat scroll 0% 0%;
+  cursor: pointer;
+
+  &:hover {
+    color: ${color.orange};
+  }
+
+  color: ${({ active }) => (active ? color.orange : 'inherit')};
+`

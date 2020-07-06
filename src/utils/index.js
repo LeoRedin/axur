@@ -35,3 +35,18 @@ export function summary(posts) {
 
   return postsSummary
 }
+
+export function orderedByDate(posts, method) {
+  const sorted = posts.slice().sort((a, b) => {
+    const splitA = a.publishedAt.split('/')
+    const splitB = b.publishedAt.split('/')
+    const dateA = new Date(splitA[2], splitA[0], splitA[1])
+    const dateB = new Date(splitB[2], splitB[0], splitB[1])
+
+    if (method === 'c') return dateA - dateB
+
+    return dateB - dateA
+  })
+
+  return sorted
+}
